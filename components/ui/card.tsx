@@ -105,7 +105,7 @@ type ProjectCardProps = {
 
 function ProjectCard({ filename, name, description, tags, href, image }: ProjectCardProps) {
   return (
-      <div className="group flex flex-col rounded-lg border border-border bg-card overflow-hidden transition-all hover:-translate-y-1 hover:border-muted-foreground">
+      <div className="group flex flex-col rounded-lg border border-border bg-card overflow-hidden transition-all hover:-translate-y-1 hover:border-muted-foreground z-10">
 
         {/* Title bar */}
         <div className="flex items-center gap-2 px-3.5 py-2.5 border-b border-border bg-white/[0.02]">

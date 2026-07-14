@@ -164,3 +164,33 @@
     @apply font-sans;
   }
 }
+
+.hero-grid-bg {
+  position: relative;
+  background-color: #08090a;
+  background-image:
+          linear-gradient(rgba(255, 255, 255, 0.09) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.09) 1px, transparent 1px);
+  background-size: 44px 44px;
+  background-position: center;
+  overflow: hidden;
+  padding: 88px 32px 96px;
+}
+
+.hero-grid-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+          ellipse 55% 55% at center,
+          rgba(8, 9, 10, 0.55) 0%,
+          rgba(8, 9, 10, 0.15) 60%,
+          rgba(8, 9, 10, 0) 100%
+  );
+  pointer-events: none;
+}
+
+.hero-grid-bg > * {
+  position: relative;
+  z-index: 1;
+}
