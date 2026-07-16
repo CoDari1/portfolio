@@ -23,8 +23,8 @@ export default function Navigation() {
     return (
         <div className={`fixed w-full z-50 transition-all duration-300 ${
             scrolled
-                ? 'backdrop-blur-md shadow-lg border-b border-accent-foreground'
-                : 'backdrop-blur-sm border-b border-secondary'
+                ? 'backdrop-blur-xs shadow-lg border-b border-accent-foreground'
+                : 'backdrop-blur-xs border-b border-secondary'
         }`}>
             <div className="max-w-7xl mx-auto px-4 relative">
                 <div className="flex items-center justify-between h-16">
@@ -63,7 +63,7 @@ export default function Navigation() {
                     <div className="md:hidden">
                         <button
                             onClick={toggleMenu}
-                            className="p-2 text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-[#2f2f38] rounded-lg transition-colors"
+                            className="p-2 text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-accent-foreground focus:ring-offset-2 focus:ring-offset-[#2f2f38] rounded-lg transition-colors"
                             aria-label="Toggle menu"
                         >
                             {isMenuOpen ? (
