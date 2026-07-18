@@ -6,16 +6,30 @@ import { useEffect, useRef, useState } from 'react';
 // cells line up with the painted grid behind them.
 const CELL = 44;
 const TRAIL_FADE_MS = 520;
+const MOBILE_QUERY = '(max-width: 768px), (hover: none), (pointer: coarse)';
 
 export default function InteractiveGrid() {
     const ref = useRef<HTMLDivElement>(null);
     const [dims, setDims] = useState({ cols: 0, rows: 0 });
     const [tick, setTick] = useState(0);
     const [hoveredCell, setHoveredCell] = useState<number | null>(null);
+    const [isCompactMode, setIsCompactMode] = useState(false);
+    const [activations, setActivations] = useState<Map<number, number>>(new Map());
     const activationsRef = useRef<Map<number, number>>(new Map());
     const lastCellRef = useRef<number | null>(null);
 
     useEffect(() => {
+        const media = window.matchMedia(MOBILE_QUERY);
+        const updateMode = () => setIsCompactMode(media.matches);
+
+        updateMode();
+        media.addEventListener('change', updateMode);
+        return () => media.removeEventListener('change', updateMode);
+    }, []);
+
+    useEffect(() => {
+        if (isCompactMode) return;
+
         const el = ref.current;
         if (!el) return;
 
@@ -31,9 +45,11 @@ export default function InteractiveGrid() {
         const observer = new ResizeObserver(measure);
         observer.observe(el);
         return () => observer.disconnect();
-    }, []);
+    }, [isCompactMode]);
 
     useEffect(() => {
+        if (isCompactMode) return;
+
         const el = ref.current;
         if (!el || dims.cols === 0 || dims.rows === 0) return;
 
@@ -43,15 +59,20 @@ export default function InteractiveGrid() {
         const runFadeLoop = () => {
             const now = performance.now();
             let hasActive = false;
+            let changed = false;
 
             activationsRef.current.forEach((activatedAt, cell) => {
                 if (now - activatedAt >= TRAIL_FADE_MS) {
                     activationsRef.current.delete(cell);
+                    changed = true;
                     return;
                 }
                 hasActive = true;
             });
 
+            if (changed) {
+                setActivations(new Map(activationsRef.current));
+            }
             setTick(now);
             if (hasActive) {
                 animationFrame = requestAnimationFrame(runFadeLoop);
@@ -80,6 +101,7 @@ export default function InteractiveGrid() {
                 if (lastCellRef.current === nextCell) return;
                 lastCellRef.current = nextCell;
                 activationsRef.current.set(nextCell, performance.now());
+                setActivations(new Map(activationsRef.current));
                 if (!animationFrame) {
                     animationFrame = requestAnimationFrame(runFadeLoop);
                 }
@@ -97,29 +119,44 @@ export default function InteractiveGrid() {
             if (frame) cancelAnimationFrame(frame);
             if (animationFrame) cancelAnimationFrame(animationFrame);
         };
-    }, [dims.cols, dims.rows]);
+    }, [dims.cols, dims.rows, isCompactMode]);
+
+    if (isCompactMode) {
+        return (
+            <div
+                aria-hidden
+                className="h-full w-full bg-[#08090a]"
+                style={{
+                    backgroundImage:
+                        'linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px), radial-gradient(ellipse 65% 55% at center, rgba(8, 9, 10, 0.35) 0%, rgba(8, 9, 10, 0.08) 55%, rgba(8, 9, 10, 0) 100%)',
+                    backgroundSize: '28px 28px, 28px 28px, cover',
+                    backgroundPosition: 'center',
+                }}
+            />
+        );
+    }
 
     const count = dims.cols * dims.rows;
     const getCellStyle = (index: number) => {
         if (hoveredCell === index) {
             return {
-                backgroundColor: 'rgba(126, 231, 135, 0.26)',
-                boxShadow: 'inset 0 0 18px rgba(126, 231, 135, 0.45)',
+                backgroundColor: 'rgba(126, 231, 135, 0.10)',
+                boxShadow: 'inset 0 0 14px rgba(126, 231, 135, 0.18)',
             };
         }
 
-        const activatedAt = activationsRef.current.get(index);
+        const activatedAt = activations.get(index);
         if (activatedAt === undefined) return undefined;
 
         const age = Math.max(0, tick - activatedAt);
         const progress = Math.max(0, 1 - age / TRAIL_FADE_MS);
         if (progress <= 0) return undefined;
 
-        const alpha = 0.22 * progress;
-        const glow = 0.38 * progress;
+        const alpha = 0.08 * progress;
+        const glow = 0.14 * progress;
         return {
             backgroundColor: `rgba(126, 231, 135, ${alpha})`,
-            boxShadow: `inset 0 0 16px rgba(126, 231, 135, ${glow})`,
+            boxShadow: `inset 0 0 12px rgba(126, 231, 135, ${glow})`,
         };
     };
 
