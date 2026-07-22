@@ -83,9 +83,9 @@ export default function Navigation() {
                 >
                     <div className="px-4 py-2 space-y-1">
                         {[
-                            { href: '/suites', label: 'Suites' },
-                            { href: '/apply', label: 'Apply' },
-                            { href: '/blog', label: 'Blog' },
+                            { href: '/about', label: 'About Me' },
+                            { href: '/projects', label: 'Projects' },
+                            { href: '/contact', label: 'Contact' },
                         ].map((item) => (
                             <Link
                                 key={item.href}
