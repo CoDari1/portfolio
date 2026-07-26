@@ -32,7 +32,7 @@
     "name": "ResourceHub",
     "description": "A local hub for free community resources. For TSA 2026 (4th in state)",
     "tags": ["Student", "Community", "Next.js", "Supabase", "shadcn/ui"],
-    "image": "/ResourceHub.png",
+    "image": "/Resourcehub.png",
     "href": "https://eufaularesources.vercel.app"
   },
   {
@@ -41,7 +41,7 @@
     "name": "Solar System",
     "description": "A solar system simulation. More of a learning project to challenge myself with physics.",
     "tags": ["Simulation", "Next.js", "Tailwind CSS", "shadcn/ui"],
-    "image": "/SolarSystem.png",
+    "image": "/Solarsystem.png",
     "href": "https://solarsystem-lovat.vercel.app/"
   }
 ]
