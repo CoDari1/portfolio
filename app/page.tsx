@@ -4,10 +4,10 @@ import {Reveal} from "@/components/self/Reveal";
 
 export default function Home() {
     return (
-        <div className="flex min-h-screen flex-col items-center justify-center px-8 pt-[88px] pb-24">
+        <div className="flex min-h-screen flex-col items-center justify-center px-4 pt-[88px] pb-24 sm:px-8">
 
-            <div className="container mx-auto px-4 py-8 border-border">
-                <section className="relative overflow-hidden text-center px-8 py-24 lg:py-32 border-b border-border">
+            <div className="container mx-auto w-full px-2 py-8 border-border sm:px-4">
+                <section className="relative w-full overflow-hidden border-b border-border px-4 py-20 text-center sm:px-8 lg:py-32">
                     <div className="pointer-events-none absolute left-1/2 top-[10%] h-[380px] w-[70%] -translate-x-1/2 rounded-full bg-[#7ee787] opacity-20 blur-[50px] sm:h-[450px] sm:w-[500px] sm:blur-[55px] lg:h-[500px] lg:w-[900px] lg:blur-[60px]"></div>                    <p className="mb-5 font-mono text-xs uppercase tracking-[0.14em] text-gray-500 before:content-['//_'] before:text-[#7ee787]">
                         full-stack developer
                     </p>
@@ -31,15 +31,15 @@ export default function Home() {
                 </section>
 
 
-                <div className="container mx-auto px-4 py-8 border-b border-border flex flex-col items-center">
+                <div className="container mx-auto flex w-full flex-col items-stretch border-b border-border px-2 py-8 sm:px-4">
                     <Reveal>
                         <p className="mb-5 font-mono text-lg uppercase tracking-[0.14em] text-gray-500 before:content-['//_'] before:text-[#7ee787]">
                             featured projects
                         </p>
                     </Reveal>
 
-                    <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-                        <Reveal delay={0} className={'h-full'}>
+                    <div className="grid w-full grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+                        <Reveal delay={0} className="h-full w-full">
                             <ProjectCard
                                 filename={"UrbanHerbs"}
                                 name={"Urban Herbs"}
@@ -50,7 +50,7 @@ export default function Home() {
                             />
                         </Reveal>
 
-                        <Reveal delay={120} className={'h-full'}>
+                        <Reveal delay={120} className="h-full w-full">
                             <ProjectCard
                                 filename={"PoetsUnited"}
                                 name={"Poets United"}
@@ -61,7 +61,7 @@ export default function Home() {
                             />
                         </Reveal>
 
-                        <Reveal delay={240} className={'h-full'}>
+                        <Reveal delay={240} className="h-full w-full">
                             <ProjectCard
                                 filename={"AListSuites"}
                                 name={"A-List Suites"}

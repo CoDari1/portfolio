@@ -1,0 +1,47 @@
+[
+  {
+    "id": "urbanherbs",
+    "filename": "UrbanHerbs",
+    "name": "Urban Herbs",
+    "description": "Restaurant Demo site. For TSA 2025 (1st in state)",
+    "tags": ["Marketing", "Next.js", "Tailwind CSS", "shadcn/ui", "EmailJS"],
+    "image": "/UrbanHerbs.png",
+    "href": "https://urban-herbs.vercel.app"
+  },
+  {
+    "id": "poetsunited",
+    "filename": "PoetsUnited",
+    "name": "Poets United",
+    "description": "A website where people can upload and read poems.",
+    "tags": ["Poetry", "Community", "Next.js", "Supabase", "Tiptap"],
+    "image": "/poets-united.png",
+    "href": "https://poets-united.vercel.app"
+  },
+  {
+    "id": "alistsuites",
+    "filename": "AListSuites",
+    "name": "A-List Suites",
+    "description": "A demo suite/tenant management service.",
+    "tags": ["SaaS", "Property Management", "Next.js", "Supabase", "shadcn/ui"],
+    "image": "/Alistsuites.png",
+    "href": "https://alistsuites.vercel.app"
+  },
+  {
+    "id": "resourcehub",
+    "filename": "ResourceHub",
+    "name": "ResourceHub",
+    "description": "A local hub for free community resources. For TSA 2026 (4th in state)",
+    "tags": ["Student", "Community", "Next.js", "Supabase", "shadcn/ui"],
+    "image": "/ResourceHub.png",
+    "href": "https://eufaularesources.vercel.app"
+  },
+  {
+    "id": "solarsystem",
+    "filename": "SolarSystem",
+    "name": "Solar System",
+    "description": "A solar system simulation. More of a learning project to challenge myself with physics.",
+    "tags": ["Simulation", "Next.js", "Tailwind CSS", "shadcn/ui"],
+    "image": "/SolarSystem.png",
+    "href": "https://solarsystem-lovat.vercel.app/"
+  }
+]

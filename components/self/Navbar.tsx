@@ -24,7 +24,7 @@ export default function Navigation() {
         <div className={`fixed w-full z-50 transition-all duration-300 ${
             scrolled
                 ? 'backdrop-blur-xs shadow-lg border-b border-accent-foreground'
-                : 'backdrop-blur-xs border-b border-secondary'
+                : ' border-b border-secondary'
         }`}>
             <div className="max-w-7xl mx-auto px-4 relative">
                 <div className="flex items-center justify-between h-16">
