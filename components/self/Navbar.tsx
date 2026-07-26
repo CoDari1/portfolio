@@ -24,7 +24,7 @@ export default function Navigation() {
         <div className={`fixed w-full z-50 transition-all duration-300 ${
             scrolled
                 ? 'backdrop-blur-xs shadow-lg border-b border-accent-foreground'
-                : ' border-b border-secondary'
+                : 'backdrop-blur-xs border-b border-secondary'
         }`}>
             <div className="max-w-7xl mx-auto px-4 relative">
                 <div className="flex items-center justify-between h-16">
@@ -79,7 +79,7 @@ export default function Navigation() {
                         isMenuOpen
                             ? 'max-h-[400px] border-t border-white/10'
                             : 'max-h-0 border-t-0'
-                    } md:hidden overflow-hidden transition-all duration-300 ease-in-out absolute top-full left-0 right-0 bg-[#2f2f38] backdrop-blur-lg shadow-lg rounded-b-xl`}
+                    } md:hidden overflow-hidden transition-all duration-300 ease-in-out absolute top-full left-0 right-0 bg-[#2f2f38] backdrop-blur-lg shadow-lg rounded-b-xl z-100`}
                 >
                     <div className="px-4 py-2 space-y-1">
                         {[
