@@ -103,6 +103,3 @@ Visit my portfolio to learn more about me and my work.
 
 ---
 
-<p align="center">
-  Built with Next.js, TypeScript, React, and a lot of curiosity.
-</p>
