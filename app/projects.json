@@ -13,7 +13,7 @@
     "filename": "PoetsUnited",
     "name": "Poets United",
     "description": "A website where people can upload and read poems.",
-    "tags": ["Poetry", "Community", "Next.js", "Supabase", "Tiptap"],
+    "tags": ["Poetry", "Community", "Next.js", "Supabase"],
     "image": "/poets-united.png",
     "href": "https://poets-united.vercel.app"
   },

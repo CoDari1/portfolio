@@ -2,8 +2,6 @@
 
 import { useEffect, useRef, useState } from 'react';
 
-// Matches the 44px background-size used by .hero-grid-bg so the interactive
-// cells line up with the painted grid behind them.
 const CELL = 44;
 const TRAIL_FADE_MS = 520;
 const MOBILE_QUERY = '(max-width: 768px), (hover: none), (pointer: coarse)';

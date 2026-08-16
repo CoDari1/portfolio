@@ -121,7 +121,6 @@ function ProjectCard({ filename, name, description, tags, href, image }: Project
               fill
               className="object-cover object-top opacity-90 transition-opacity group-hover:opacity-100"
           />
-          {/* subtle scanline tint to keep it in the terminal world */}
           <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent pointer-events-none" />
         </div>
 
@@ -155,7 +154,7 @@ function ProjectCard({ filename, name, description, tags, href, image }: Project
           className="mt-auto inline-flex items-center gap-1.5 text-primary text-sm w-fit border-b border-transparent hover:border-primary transition-colors animate-pulse"
          target='_blank'
          >
-          $ open --project {name.toLowerCase().replace(/\s+/g, "-")} →
+          $ open project {name.toLowerCase().replace(/\s+/g, "-")} →
         </a>
       </div>
 </div>

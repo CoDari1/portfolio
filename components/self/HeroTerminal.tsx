@@ -13,9 +13,9 @@ type Line = {
 
 const LINES: Line[] = [
     { prefix: '$ ', text: 'whoami', promptColor: true },
-    { prefix: '> ', text: 'Darius M. — Full-stack Developer', indent: true, bold: true },
+    { prefix: '> ', text: 'Darius McQueen', indent: true, bold: true },
     { prefix: '$ ', text: 'cat mission.txt', promptColor: true },
-    { prefix: '> ', text: 'I build fast, focused products with clean code and sharper design.', indent: true, muted: true },
+    { prefix: '> ', text: 'I enjoy bringing ideas to life in unique and creative ways.', indent: true, muted: true },
 ];
 
 export function HeroTerminal() {

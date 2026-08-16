@@ -63,13 +63,13 @@ export default function ContactPage() {
                 "t0xyxfHSaLLB68L1u"
             );
 
-            console.log("✅ Email sent:", result.text);
-            setSuccessMessage("✅ Message sent successfully!");
+            console.log("Email sent:", result.text);
+            setSuccessMessage("Message sent!");
             setFormData(initialFormData);
             setTimeout(() => setSuccessMessage(""), 5000);
         } catch (error) {
-            console.error("❌ Email sending failed:", error);
-            setSuccessMessage("❌ Failed to send message. Please try again.");
+            console.error("Email sending failed:", error);
+            setSuccessMessage("Failed to send message. Please try again.");
             setTimeout(() => setSuccessMessage(""), 5000);
         }
     };
@@ -93,10 +93,10 @@ export default function ContactPage() {
                                 get in touch
                             </p>
                             <h1 className="text-3xl font-semibold tracking-tight text-gray-50 sm:text-4xl">
-                                Let&apos;s build something useful.
+                                Looking for a developer?
                             </h1>
                             <p className="mt-3 max-w-2xl text-sm leading-6 text-gray-400 sm:text-base">
-                                Reach out for freelance work, collaborations, or just to say hello.
+                                Or maybe you just want to say hi? Reach out!
                             </p>
                         </div>
 

@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Welcome to my Portfolio!
 
-## Getting Started
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Main Features:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Terminal style portfolio
+2. About Page, Contact Page, and Projects Page
+3. Grid trail background on laptops/desktops
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## About This Project:
+This is a personal website that I built to showcase my projects and skills. A few components were based on other 
+projects I've made. The navbar and hamburger menu are based heavily on the AListSuites navbar, and the contact form is 
+basically the UrbanHerbs contact form in the new color scheme. 
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Feel free to use anything you like from this project.
 
-## Learn More
+## Built With:
+NextJS, React, TailwindCSS, Framer Motion, EmailJS, Shadcn, and Vercel.
 
-To learn more about Next.js, take a look at the following resources:
+Here's a secret little poem I wrote
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Throughout the Years
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+> Here, I lay in a lonesome land,
+> dreaming of a world where I can be free.
+> In this place full of green,
+> yet lacking a single tree.
+>
+> I crave to see a soul, or at least proof of another's existence,
+> and yet I know that I will never find it.
+> For I have wandered far throughout the years,
+> and yet I have not found it.
+>
+> Nothing is left to be found.
+> Nothing is left to be seen.
+> Nothing is left to be known.
+>
+> And so, I lay alone,
+> knowing that I will remain here forever.

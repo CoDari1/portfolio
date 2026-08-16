@@ -9,12 +9,12 @@ const mediums = [
     {
         tag: "02_written",
         title: "The Written Medium",
-        body: "Code and poetry aren't as far apart as people think — both live and die by structure, precision, and knowing how to assign meaning to lines.",
+        body: "As a poet, I tend to have an eye for more nuanced meaning in words. This also applies to just about everytghing I do, including websites."
     },
     {
         tag: "03_musical",
         title: "The Musical Medium",
-        body: "Percussionist. Music taught me expression, discipline, and how to lead a group toward one outcome.",
+        body: "Percussionist. Music taught me expression, discipline, and how to lead a group toward unity.",
     },
 ];
 
@@ -47,11 +47,11 @@ function TerminalWindow({
     children: React.ReactNode;
 }) {
     return (
-        <div className="overflow-hidden rounded-[12px] border border-white/10 bg-[#0c0f12] shadow-[0_40px_100px_-30px_rgba(0,0,0,0.7)]">
+        <div className="overflow-hidden rounded-xl border border-white/10 bg-[#0c0f12] shadow-[0_40px_100px_-30px_rgba(0,0,0,0.7)]">
             <div className="flex items-center gap-2 border-b border-white/10 bg-[#111519] px-4 py-3">
-                <span className="h-[11px] w-[11px] rounded-full bg-red-500" />
-                <span className="h-[11px] w-[11px] rounded-full bg-yellow-400" />
-                <span className="h-[11px] w-[11px] rounded-full bg-green-500" />
+                <span className="h-2.75 w-2.75 rounded-full bg-red-500" />
+                <span className="h-2.75 w-2.75 rounded-full bg-yellow-400" />
+                <span className="h-2.75 w-2.75 rounded-full bg-green-500" />
                 <span className="ml-2 font-mono text-[12.5px] text-gray-500">{title}</span>
             </div>
             <div className="p-6 sm:p-8">{children}</div>
@@ -61,29 +61,25 @@ function TerminalWindow({
 
 export default function AboutPage() {
     return (
-        <main className="relative min-h-screen px-4 pb-24 pt-[88px] text-gray-100 sm:px-8">
-            {/* Soft green glow — same treatment as Home/Contact */}
+        <main className="relative min-h-screen px-4 pb-24 pt-22 text-gray-100 sm:px-8">
             <div className="pointer-events-none absolute left-1/2 top-[8%] h-[380px] w-[70%] -translate-x-1/2 rounded-full bg-[#7ee787] opacity-15 blur-[60px] sm:h-[450px] sm:w-[500px]" />
-
             <div className="relative mx-auto flex w-full max-w-3xl flex-col gap-10">
                 {/* Hook */}
                 <Reveal>
                     <TerminalWindow title="~/darius — about">
                         <p className="font-mono text-sm text-[#7ee787]">$ cat about.md</p>
                         <h1 className="mt-4 text-3xl font-semibold tracking-tight text-gray-50 sm:text-4xl">
-                            I don&apos;t think in one language. I think in code, in circuits, in
-                            verse, in rhythm.
+                            Creativity isn&apos;t a skill or talent.
                         </h1>
                         <p className="mt-4 max-w-2xl text-base leading-relaxed text-gray-400">
-                            Creativity isn&apos;t a single medium — it&apos;s a habit of mind I
-                            carry into everything I touch.
+                            It&apos;s a way of thinking, a way of seeing life through a different lens.
                         </p>
                     </TerminalWindow>
                 </Reveal>
 
                 {/* Education */}
                 <Reveal delay={80}>
-                    <div className="overflow-hidden rounded-[12px] border border-white/10 bg-[#0c0f12] p-6 font-mono text-sm shadow-[0_40px_100px_-30px_rgba(0,0,0,0.5)] sm:p-8">
+                    <div className="overflow-hidden rounded-xl border border-white/10 bg-[#0c0f12] p-6 font-mono text-sm shadow-[0_40px_100px_-30px_rgba(0,0,0,0.5)] sm:p-8">
                         <p className="text-gray-500">
                             <span className="text-[#7ee787]">//</span> education
                         </p>
@@ -94,7 +90,7 @@ export default function AboutPage() {
                         <p className="pl-4 text-gray-300">
                             majors:{" "}
                             <span className="text-[#7ee787]">
-                &quot;Computer Science + Computer Engineering&quot;
+                &quot;Computer Science&quot;
               </span>
                             ,
                         </p>
@@ -122,7 +118,7 @@ export default function AboutPage() {
                     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                         {mediums.map((m, i) => (
                             <Reveal key={m.tag} delay={60 * i}>
-                                <div className="group h-full overflow-hidden rounded-[12px] border border-white/10 bg-[#0c0f12] transition-colors hover:border-white/20">
+                                <div className="group h-full overflow-hidden rounded-xl border border-white/10 bg-[#0c0f12] transition-colors hover:border-white/20">
                                     <div className="flex items-center gap-2 border-b border-white/10 bg-[#111519] px-4 py-2.5">
                                         <span className="h-2.5 w-2.5 rounded-full bg-[#7ee787]" />
                                         <span className="font-mono text-xs text-gray-500">{m.tag}</span>
@@ -145,26 +141,25 @@ export default function AboutPage() {
                             // why it matters for clients
                         </p>
                         <p className="mt-3 text-base leading-relaxed text-gray-300">
-                            Most developers can make a site work. Fewer can make it say
-                            something. Moving across mediums gives me a storytelling instinct for every build: not
-                            just does this function, but does this feel like your business.
+                            Most developers can make a site work. Fewer can make it tell a story. I can make your website
+                            feel like you.
                         </p>
                     </TerminalWindow>
                 </Reveal>
 
                 {/* Leadership */}
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                    {leadership.map((l, i) => (
-                        <Reveal key={l.tag} delay={60 * i}>
+                    {leadership.map((leadership, i) => (
+                        <Reveal key={leadership.tag} delay={60 * i}>
                             <div className="h-full overflow-hidden rounded-[12px] border border-white/10 bg-[#0c0f12]">
-                                <div className="flex items-center gap-2 border-b border-white/10 bg-[#111519] px-4 py-2.5">
+                                <div className="flex items-center grounded-xlhite/10 bg-[#111519] px-4 py-2.5">
                                     <span className="h-2.5 w-2.5 rounded-full bg-[#79C0FF]" />
-                                    <span className="font-mono text-xs text-gray-500">{l.tag}</span>
+                                    <span className="font-mono text-xs text-gray-500">{leadership.tag}</span>
                                 </div>
                                 <div className="p-6">
-                                    <h3 className="font-medium text-gray-50">{l.title}</h3>
+                                    <h3 className="font-medium text-gray-50">{leadership.title}</h3>
                                     <p className="mt-2 text-sm leading-relaxed text-gray-400">
-                                        {l.body}
+                                        {leadership.body}
                                     </p>
                                 </div>
                             </div>
@@ -175,7 +170,7 @@ export default function AboutPage() {
                 {/* Stack */}
                 <Reveal delay={80}>
                     <div className="overflow-hidden rounded-[12px] border border-white/10 bg-[#0c0f12]">
-                        <div className="flex items-center gap-2 border-b border-white/10 bg-[#111519] px-4 py-2.5">
+                        <div className="flex items-crounded-xl-b border-white/10 bg-[#111519] px-4 py-2.5">
                             <span className="h-2.5 w-2.5 rounded-full bg-[#7ee787]" />
                             <span className="font-mono text-xs text-gray-500">
                 ~/darius — stack.json

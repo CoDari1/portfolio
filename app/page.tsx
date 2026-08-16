@@ -8,7 +8,7 @@ export default function Home() {
 
             <div className="container mx-auto w-full px-2 py-8 border-border sm:px-4">
                 <section className="relative w-full overflow-hidden border-b border-border px-4 py-20 text-center sm:px-8 lg:py-32">
-                    <div className="pointer-events-none absolute left-1/2 top-[10%] h-[380px] w-[70%] -translate-x-1/2 rounded-full bg-[#7ee787] opacity-20 blur-[50px] sm:h-[450px] sm:w-[500px] sm:blur-[55px] lg:h-[500px] lg:w-[900px] lg:blur-[60px]"></div>                    <p className="mb-5 font-mono text-xs uppercase tracking-[0.14em] text-gray-500 before:content-['//_'] before:text-[#7ee787]">
+                    <p className="mb-5 font-mono text-xs uppercase tracking-[0.14em] text-gray-500 before:content-['//_'] before:text-[#7ee787]">
                         full-stack developer
                     </p>
 
@@ -17,7 +17,7 @@ export default function Home() {
                             <span className="h-[11px] w-[11px] rounded-full bg-red-500"></span>
                             <span className="h-[11px] w-[11px] rounded-full bg-yellow-400"></span>
                             <span className="h-[11px] w-[11px] rounded-full bg-green-500"></span>
-                            <span className="ml-2 font-mono text-[12.5px] text-gray-500">~/darius — zsh</span>
+                            <span className="ml-2 font-mono text-[12.5px] text-gray-500">Hero.tsx</span>
                         </div>
                         <HeroTerminal />
                     </div>
@@ -55,7 +55,7 @@ export default function Home() {
                                 filename={"PoetsUnited"}
                                 name={"Poets United"}
                                 description={"A website where people can upload and read poems."}
-                                tags={["Poetry", "Community", "Next.js", "Supabase", "Tiptap"]}
+                                tags={["Poetry", "Community", "Next.js", "Supabase"]}
                                 image={"/poets-united.png"}
                                 href={"https://poets-united.vercel.app"}
                             />
@@ -72,14 +72,14 @@ export default function Home() {
                             />
                         </Reveal>
                     </div>
-                    <Reveal delay={320}>
+                    <Reveal delay={320} className="flex justify-center">
                         <a
-                        href="/projects"
-                        className="mt-10 inline-flex items-center gap-1 rounded-lg border border-white/10 bg-[#0d1013] px-6 py-3.5 font-mono text-base text-gray-100 transition hover:-translate-y-0.5 hover:border-[#7ee787] hover:shadow-[0_12px_30px_-10px_rgba(126,231,135,0.35)]">
-                        <span className="mr-2 text-[#7ee787]">$</span>view --more-projects
-                        <span className="ml-1.5 inline-block h-[1em] w-[0.55em] animate-caret-blink bg-[#7ee787] align-text-bottom"></span>
-                    </a>
-                </Reveal>
+                            href="/projects"
+                            className="mt-10 inline-flex items-center gap-1 rounded-lg border border-white/10 bg-[#0d1013] px-6 py-3.5 font-mono text-base text-gray-100 transition hover:-translate-y-0.5 hover:border-[#7ee787] hover:shadow-[0_12px_30px_-10px_rgba(126,231,135,0.35)]">
+                            <span className="mr-2 text-[#7ee787]">$</span>view --more-projects
+                            <span className="ml-1.5 inline-block h-[1em] w-[0.55em] animate-caret-blink bg-[#7ee787] align-text-bottom"></span>
+                        </a>
+                    </Reveal>
 
             </div>
         </div>
