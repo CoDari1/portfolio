@@ -151,7 +151,7 @@ function ProjectCard({ filename, name, description, tags, href, image }: Project
           {/* Visit link */}
 
          <a href={href}
-          className="mt-auto inline-flex items-center gap-1.5 text-primary text-sm w-fit border-b border-transparent hover:border-primary transition-colors animate-pulse"
+          className="mt-auto border-b-primary inline-flex items-center gap-1.5 text-primary text-sm w-fit border-b border-transparent transition-colors animate-pulse"
          target='_blank'
          >
           $ open project {name.toLowerCase().replace(/\s+/g, "-")} →
