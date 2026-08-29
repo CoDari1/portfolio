@@ -37,7 +37,6 @@ export default function Navigation() {
                     </Link>
                     <div className="hidden md:flex items-center space-x-2">
                         {[
-                            { href: '/about', label: 'About Me' },
                             { href: '/projects', label: 'Projects' },
                             { href: '/contact', label: 'Contact' },
                         ].map((item) => (
