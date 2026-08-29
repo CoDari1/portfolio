@@ -4,7 +4,7 @@ import { ProjectCard } from '@/components/ui/card'
 
 const Page = () => {
     return (
-        <div className="container mx-auto px-4 py-8">
+        <div className="container mx-auto px-4 py-20">
             <section className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
                 {projects.map((p: any) => (
                     <ProjectCard
